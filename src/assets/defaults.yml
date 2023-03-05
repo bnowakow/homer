@@ -11,7 +11,7 @@ header: false
 footer: false  
 #footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
 
-columns: 1
+columns: 2
 connectivityCheck: true
 
 # Optional theme customization
@@ -72,8 +72,8 @@ links:
 # First level array represent a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
-  - name: "Applications"
-    icon: "fas fa-cloud"
+  - name: "Monitoring"
+    icon: "fas fa-magnifying-glass"
     items:
       # icons from https://icon-icons.com/
       - name: "Zabbix"
@@ -83,12 +83,28 @@ services:
         keywords: "zabbix monitoring observability"
         url: "http://zabbix.local.bnowakowski.pl/zabbix.php?name=&evaltype=0&tags%5B0%5D%5Btag%5D=bnowakow&tags%5B0%5D%5Boperator%5D=0&tags%5B0%5D%5Bvalue%5D=&show_tags=3&tag_name_format=1&tag_priority=&filter_name=&filter_show_counter=0&filter_custom_time=0&sort=name&sortorder=ASC&show_details=0&action=latest.view&subfilter_hostids%5B%5D=10559&subfilter_hostids%5B%5D=10556"
           #target: "_blank" # optional html a tag target attribute
+      - name: "Kibana"
+        logo: "assets/tools/kibana.png"
+        url: "http://kibana.local.bnowakowski.pl/app/dashboards#/view/085b5510-aab1-11ed-8e3f-1b4b9c62db48?_g=(filters:!())"
+
+  - name: "Storage"
+    icon: "fas fa-hard-drive"
+    items:
       - name: "TrueNAS"
         logo: "assets/tools/truenas.png"
         subtitle: "nas"
         keywords: "truenas nas"
           #tag: "app"
         url: "http://nas.local.bnowakowski.pl"
+      - name: "Crash Plan"
+        logo: "assets/tools/crashplan.png"
+        subtitle: "backup client"
+        keywords: "crashplan crash plan backup client"
+        url: "http://crashplan.local.bnowakowski.pl"
+
+  - name: "Home Automation"
+    icon: "fas fa-house-signal"
+    items:
       - name: "Home Assistant"
         logo: "assets/tools/ha.png"
         subtitle: "home automation"
@@ -97,25 +113,14 @@ services:
       - name: "Zigbee2MQTT"
         logo: "assets/tools/zigbee.png"
         url: "http://zigbee2mqtt.local.bnowakowski.pl/"
-      - name: "Crash Plan"
-        logo: "assets/tools/crashplan.png"
-        subtitle: "backup client"
-        keywords: "crashplan crash plan backup client"
-        url: "http://crashplan.local.bnowakowski.pl"
-      - name: "Kibana"
-        logo: "assets/tools/kibana.png"
-        url: "http://kibana.local.bnowakowski.pl/app/dashboards#/view/085b5510-aab1-11ed-8e3f-1b4b9c62db48?_g=(filters:!())"
-      - name: "Plex"
-        logo: "assets/tools/plex.png"
-        url: "http://plex.local.bnowakowski.pl/"
+
+  - name: "Networking"
+    icon: "fas fa-network-wired"
+    items:
       - name: "UniFi"
         subtitle: "home router"
         logo: "assets/tools/ubiquiti.png"
         url: "https://192.168.0.1/network"
-      - name: "Tautulli"
-        subtitle: "plex statistics"
-        logo: "assets/tools/tautulli.png"
-        url: "http://tautulli.local.bnowakowski.pl"
       - name: "Pi-hole"
         subtitle: "ad blocking dns"
         logo: "assets/tools/pihole.png"
@@ -124,11 +129,26 @@ services:
         subtitle: "reverse proxy"
         logo: "assets/tools/traefik.png"
         url: "http://traefik.local.bnowakowski.pl/dashboard/"
-      - name: "Proxmox"
-        subtitle: "TURNED-OFF VM manager"
-        logo: "assets/tools/proxmox.png"
-        url: "http://proxmox.localdomain:8006"
       - name: "Orange"
         subtitle: "internet modem"
         logo: "assets/tools/orange.png"
         url: "http://192.168.1.222"
+
+  - name: "Media"
+    icon: "fas fa-film"
+    items:
+      - name: "Plex"
+        logo: "assets/tools/plex.png"
+        url: "http://plex.local.bnowakowski.pl/"
+      - name: "Tautulli"
+        subtitle: "plex statistics"
+        logo: "assets/tools/tautulli.png"
+        url: "http://tautulli.local.bnowakowski.pl"
+
+  - name: "Other"
+    icon: "fas fa-list-ul"
+    items:
+      - name: "Proxmox"
+        subtitle: "TURNED-OFF VM manager"
+        logo: "assets/tools/proxmox.png"
+        url: "http://proxmox.localdomain:8006"
