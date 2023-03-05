@@ -1,21 +1,20 @@
 ---
-# Default configuration
+# Homepage configuration
+# See https://fontawesome.com/v5/search for icons options
 
-title: "Dashboard"
+title: "Margok dashboard"
 subtitle: "Homer"
+logo: "logo.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
 
-header: true
-footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
+header: false
+footer: false  
+#footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
 
-columns: 3
+columns: 1
 connectivityCheck: true
 
-defaults:
-  # columns, list
-  layout: columns
-  # auto, light, dark
-  colorTheme: auto
-
+# Optional theme customization
 theme: default
 colors:
   light:
@@ -31,7 +30,6 @@ colors:
     card-shadow: rgba(0, 0, 0, 0.1)
     link: "#3273dc"
     link-hover: "#363636"
-    background-image: ""
   dark:
     highlight-primary: "#3367d6"
     highlight-secondary: "#4285f4"
@@ -45,11 +43,92 @@ colors:
     card-shadow: rgba(0, 0, 0, 0.4)
     link: "#3273dc"
     link-hover: "#ffdd57"
-    background-image: ""
 
-message: ~
-links: []
-services: []
+# Optional message
+#message:
+#  #url: https://b4bz.io
+#  style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+#  title: "Demo !"
+#  icon: "fa fa-grin"
+#  content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
 
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "bnowakow"
+    icon: "fab fa-github"
+    url: "https://github.com/bnowakow?tab=repositories"
+      #target: "_blank" # optional html a tag target attribute
+  - name: "Zbiórka Kuby"
+    icon: "fas fa-book"
+    url: "http://siepomaga.pl/raczka-kuby"
+  # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
+  # see url field and assets/additional-page.yml.dist used in this example:
+  #- name: "another page!"
+  #  icon: "fas fa-file-alt"
+  #  url: "#additional-page" 
 
-proxy: ~
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Applications"
+    icon: "fas fa-cloud"
+    items:
+      # icons from https://icon-icons.com/
+      - name: "Zabbix"
+        logo: "assets/tools/zabbix.png"
+        subtitle: "monitoring"
+          #tag: "app"
+        keywords: "zabbix monitoring observability"
+        url: "http://zabbix.local.bnowakowski.pl/zabbix.php?name=&evaltype=0&tags%5B0%5D%5Btag%5D=bnowakow&tags%5B0%5D%5Boperator%5D=0&tags%5B0%5D%5Bvalue%5D=&show_tags=3&tag_name_format=1&tag_priority=&filter_name=&filter_show_counter=0&filter_custom_time=0&sort=name&sortorder=ASC&show_details=0&action=latest.view&subfilter_hostids%5B%5D=10559&subfilter_hostids%5B%5D=10556"
+          #target: "_blank" # optional html a tag target attribute
+      - name: "TrueNAS"
+        logo: "assets/tools/truenas.png"
+        subtitle: "nas"
+        keywords: "truenas nas"
+          #tag: "app"
+        url: "http://nas.local.bnowakowski.pl"
+      - name: "Home Assistant"
+        logo: "assets/tools/ha.png"
+        subtitle: "home automation"
+        keywords: "home assistant homeassistant ha home automation"
+        url: "https://margok.duckdns.org:8123/"
+      - name: "Zigbee2MQTT"
+        logo: "assets/tools/zigbee.png"
+        url: "http://zigbee2mqtt.local.bnowakowski.pl/"
+      - name: "Crash Plan"
+        logo: "assets/tools/crashplan.png"
+        subtitle: "backup client"
+        keywords: "crashplan crash plan backup client"
+        url: "http://crashplan.local.bnowakowski.pl"
+      - name: "Kibana"
+        logo: "assets/tools/kibana.png"
+        url: "http://kibana.local.bnowakowski.pl/app/dashboards#/view/085b5510-aab1-11ed-8e3f-1b4b9c62db48?_g=(filters:!())"
+      - name: "Plex"
+        logo: "assets/tools/plex.png"
+        url: "http://plex.local.bnowakowski.pl/"
+      - name: "UniFi"
+        subtitle: "home router"
+        logo: "assets/tools/ubiquiti.png"
+        url: "https://192.168.0.1/network"
+      - name: "Tautulli"
+        subtitle: "plex statistics"
+        logo: "assets/tools/tautulli.png"
+        url: "http://tautulli.local.bnowakowski.pl"
+      - name: "Pi-hole"
+        subtitle: "ad blocking dns"
+        logo: "assets/tools/pihole.png"
+        url: "http://pihole.local.bnowakowski.pl/admin/"
+      - name: "Traefik"
+        subtitle: "reverse proxy"
+        logo: "assets/tools/traefik.png"
+        url: "http://traefik.local.bnowakowski.pl/dashboard/"
+      - name: "Proxmox"
+        subtitle: "TURNED-OFF VM manager"
+        logo: "assets/tools/proxmox.png"
+        url: "http://proxmox.localdomain:8006"
+      - name: "Orange"
+        subtitle: "internet modem"
+        logo: "assets/tools/orange.png"
+        url: "http://192.168.1.222"
