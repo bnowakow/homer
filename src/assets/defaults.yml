@@ -85,7 +85,7 @@ services:
           #target: "_blank" # optional html a tag target attribute
       - name: "Kibana"
         logo: "assets/tools/kibana.png"
-        url: "http://kibana.local.bnowakowski.pl/app/dashboards#/view/085b5510-aab1-11ed-8e3f-1b4b9c62db48?_g=(filters:!())"
+        url: "http://kibana.local.bnowakowski.pl/app/dashboards#/view/daa89690-d784-11ed-930d-677b44af6c60?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:'2022-12-31T23:00:00.000Z',to:now))"
 
   - name: "Storage"
     icon: "fas fa-hard-drive"
