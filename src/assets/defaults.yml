@@ -81,7 +81,7 @@ services:
         subtitle: "monitoring"
           #tag: "app"
         keywords: "zabbix monitoring observability"
-        url: "http://zabbix.local.bnowakowski.pl/zabbix.php?name=&evaltype=0&tags%5B0%5D%5Btag%5D=bnowakow&tags%5B0%5D%5Boperator%5D=0&tags%5B0%5D%5Bvalue%5D=&show_tags=3&tag_name_format=1&tag_priority=&filter_name=&filter_show_counter=0&filter_custom_time=0&sort=name&sortorder=ASC&show_details=0&action=latest.view&subfilter_hostids%5B%5D=10559&subfilter_hostids%5B%5D=10556"
+        url: "http://zabbix.local.bnowakowski.pl/zabbix.php?name=&evaltype=0&tags%5B0%5D%5Btag%5D=bnowakow&tags%5B0%5D%5Boperator%5D=4&tags%5B0%5D%5Bvalue%5D=&show_tags=3&tag_name_format=0&tag_priority=&filter_name=&filter_show_counter=0&filter_custom_time=0&sort=name&sortorder=ASC&show_details=0&action=latest.view&subfilter_hostids%5B%5D=10564&subfilter_hostids%5B%5D=10568"
           #target: "_blank" # optional html a tag target attribute
       - name: "Kibana"
         logo: "assets/tools/kibana.png"
@@ -98,7 +98,7 @@ services:
         url: "http://nas.local.bnowakowski.pl"
       - name: "Crash Plan"
         logo: "assets/tools/crashplan.png"
-        subtitle: "backup client"
+        subtitle: "TURNED-OFF backup client"
         keywords: "crashplan crash plan backup client"
         url: "http://crashplan.local.bnowakowski.pl"
 
