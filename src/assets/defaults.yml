@@ -153,7 +153,10 @@ services:
       - name: "Jellyfin"
         logo: "assets/tools/jellyfin.png"
         url: "http://jellyfin.local.bnowakowski.pl/"
-      
+      - name: "YouTubeDl-Material"
+        logo: "assets/tools/youtube-dl.png"
+        url: "http://nas.localdomain:8998/"
+
   - name: "Media - ARR"
     icon: "fas fa-film"
     items:
