@@ -155,7 +155,7 @@ services:
         url: "http://jellyfin.local.bnowakowski.pl:8096/"
       - name: "YouTubeDl-Material"
         logo: "assets/tools/youtube-dl.png"
-        url: "http://nas.localdomain:8998/"
+        url: "http://nas.local.bnowakowski.pl:8998/"
 
   - name: "Media - ARR"
     icon: "fas fa-film"
