@@ -88,7 +88,7 @@ services:
         url: "http://scrutiny.local.bnowakowski.pl:10151"
       - name: "Kibana"
         logo: "assets/tools/kibana.png"
-        url: "http://kibana.localdomain.bnowakowski.pl:5601/app/dashboards#/view/09ad7fb0-0a79-11ee-9344-1fcc49cbbe80?_g=(filters:!())"
+        url: "http://kibana.localdomain.bnowakowski.pl:5601/app/dashboards#/view/08d841e0-4e73-11ee-84a6-a9a7c8551671?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-3M,to:now))"
 
   - name: "Storage"
     icon: "fas fa-hard-drive"
